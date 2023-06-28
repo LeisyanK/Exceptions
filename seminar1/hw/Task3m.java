@@ -38,6 +38,7 @@ public class Task3m {
         int sum = 0;
         try {
             File file = new File("G:\\GEEK_BRAINS\\Quarter2\\Exceptions\\seminar1\\hw\\text.txt");
+            // File file = new File("G:\\GEEK_BRAINS\\Quarter2\\Exceptions\\seminar1\\hw\\1.png");
             //создаем объект FileReader для объекта File
             FileReader fr = new FileReader(file);
             //создаем BufferedReader с существующего FileReader для построчного считывания
@@ -51,9 +52,11 @@ public class Task3m {
                 line = reader.readLine();
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            // e.printStackTrace();
+            System.out.println("Файл не найден.");
         } catch (IOException e) {
-            e.printStackTrace();
+            // e.printStackTrace();
+            System.out.println("Ошибка чтения файла.");
         } catch (NumberFormatException e) {
             System.out.println("Строка не является числом.");
         } finally {
