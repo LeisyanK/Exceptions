@@ -16,6 +16,8 @@ public class PowerCalculator {
         } catch (InvalidInputException e) {
             // throw new RuntimeException(e);
             System.out.println("Ошибка: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Ошибка: " + e.getClass().getSimpleName());
         } finally {
             sc.close();
         }
